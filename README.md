@@ -15,10 +15,13 @@ Custom python library
 * mkfile(path, name, extension)
 * delfile(file)
 * delfolder(folder)
+* readfile(file)
+
 ##### Examples:
 ###### `mkfile(path="E:/coding/testing/python", name="testfile", extension="txt")` Output: ```File: testfile.txt has been made in E:/coding/testing/python```
 ###### `delfile(file="E:/coding/testing/python/testfile.txt")` Output: ```File: testfile.txt successfully deleted!```
 ###### `delfolder(folder="E:/coding/testing")` Output: ```Folder: testing has been successfully deleted!```
+###### `readfile(file="file.txt")` Output: ```The contents of file.txt```
 ##### Notes:
 ###### * None *for now*
 
@@ -29,6 +32,8 @@ Custom python library
 ##### Examples:
 ###### `encrypt(file="E:/Coding/testing/python/file.txt")`
 ###### `decrypt(file="E:/Coding/testing/python/file.txt")`
+##### Notes:
+###### * None *for now*
 
 
 # CREATED BY NikkieDev
