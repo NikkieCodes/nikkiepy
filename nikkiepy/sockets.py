@@ -19,3 +19,21 @@ def connection_test(host, port):
         print("[*]TEST SUCCESSFULL")
     except TimeoutError:
         print(f"Couldn't connect to {host} on port {port}")  # A connection couldn't be made to the server
+
+def basic_server(port):
+    s = socket.socket()
+    SERVER_HOST = "0.0.0.0"
+    SERVER_PORT = port
+    BUFFER_SIZE = 4096
+
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind((SERVER_HOST, SERVER_PORT))
+    s.listen(5)
+    print(f"[SERVER] Listening on {SERVER_HOST}:{SERVER_PORT}")
+
+    while True:
+        client_socket, address = s.accept()
+        print(f"[+] CONNECTION FROM: {address}")
+        client_socket.close()
+        s.close()
+        

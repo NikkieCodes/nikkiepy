@@ -8,13 +8,26 @@ def mkfile(path, name, extension="txt"):
     try:
         f = open(f"{path}/{name}.{extension}", 'x')  # Creates the file
         f.close()  # Finished
-        print(f"File: {name}.{extension} has been made in: ")
+        print(f"File: {name}.{extension} has been made in: {path}")
 
     except FileExistsError:
         print(f"File: {name}.{extension} already exists in {path}!")
 
     except FileNotFoundError:
-        print(f"Folder: {path} does not exist!")
+        choice = input(str(f"Folder \"{path}\" doesn't exist, do you want to make it? (Y/N): "))
+        if choice.lower() == "y":
+            os.mkdir(path)
+            print(f"Made folder: {path}")
+            try:
+                f = open(f"{path}/{name}.{extension}", 'x')  # Creates the file
+                f.close()  # Finished
+                print(f"File: {name}.{extension} has been made in: {path}")
+
+            except FileExistsError:
+                print(f"File: {name}.{extension} already exists in {path}!")
+        else:
+            print("Operation cancelled.")
+
 
     except OSError as err:
         print(f"OS Error: {err}")
