@@ -7,7 +7,7 @@ Custom python library
 * connection_test(host=host, port=port)
 
 ##### Examples:
-###### `nikkiepy.connection_test(host="127.0.0.1", port=5000)` Output: ```Connects and inmediately disconnects from host, used to test connection```
+###### `connection_test(host="127.0.0.1", port=5000)` Output: ```Connects and inmediately disconnects from host, used to test connection```
 ##### Notes:
 ###### * None *for now*
 
@@ -16,14 +16,26 @@ Custom python library
 * delfile(file)
 * delfolder(folder)
 ##### Examples:
-###### `nikkiepy.mkfile(path="E:/coding/testing/python", name="testfile", extension="txt")` Output: ```File: testfile.txt has been made in E:/coding/testing/python```
-###### `nikkiepy.delfile(file="E:/coding/testing/python/testfile.txt")` Output: ```File: testfile.txt successfully deleted!```
-###### `nikkiepy.delfolder(folder="E:/coding/testing")` Output: ```Folder: testing has been successfully deleted!```
+###### `mkfile(path="E:/coding/testing/python", name="testfile", extension="txt")` Output: ```File: testfile.txt has been made in E:/coding/testing/python```
+###### `delfile(file="E:/coding/testing/python/testfile.txt")` Output: ```File: testfile.txt successfully deleted!```
+###### `delfolder(folder="E:/coding/testing")` Output: ```Folder: testing has been successfully deleted!```
 ##### Notes:
 ###### * None *for now*
 
+### crypt
+* encrypt(file)
+* decrypt(file)
+
+##### Examples:
+###### `encrypt(file="E:/Coding/testing/python/file.txt")`
+###### `decrypt(file="E:/Coding/testing/python/file.txt")`
 
 
 # CREATED BY NikkieDev
 ## Discord: Nikkiedev#6322
 ## Business contact: nikkieschaad@gmail.com
+
+### Libraries:
+* os
+* socket
+* cryptography.fernet
