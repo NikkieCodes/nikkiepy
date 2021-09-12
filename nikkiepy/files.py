@@ -60,3 +60,9 @@ def delfolder(folder):
             print(f"No permission to write to {folder}")
     else:
         print(f"Folder doesn't exist!")
+
+def readfile(file):
+    file = file # Gets file to read
+    if os.path.exists(file): # Checks if the file exists
+        with open(file, 'r') as f:
+            f.read()
