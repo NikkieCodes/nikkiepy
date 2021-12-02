@@ -38,7 +38,8 @@ Custom python library
 
 # CREATED BY NikkieDev
 ## Discord: Nikkiedev#6322
-## Business contact: nikkieschaad@gmail.com
+## Business contact: https://nikkiedev.com/contact
+## Website: https://nikkiedev.com
 
 ### Libraries:
 * os
