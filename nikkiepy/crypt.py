@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 
-key = "UHW5VsOL7Hy6h9QaoVNQwSOJqdxXq05RXNWIJf_gA3c="
+key = ""
 fer = Fernet(key)
 
 def encrypt(file):
